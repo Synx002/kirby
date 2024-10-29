@@ -1,0 +1,489 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Putih dengan opacity 90% */
+    height: 50px;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    z-index: 30;
+}
+
+.navbar-nav .nav-link {
+    color: #1423A5; /* Warna teks */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Warna ikon toggler */
+}
+
+.m-nav-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ac000d;
+    height: 60px;
+    background-color: #e60012;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.m-nav-logo img{
+    display: block;
+    width: 97px;
+    height: 24px;
+}
+
+.reduce-motion-bar{
+    align-items: center;
+    background-color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 3px 0 2px;
+    position: relative;
+    z-index: 30;
+}
+
+.reduce-motion{
+    font-family: "Dosis", "Open sans", "Helvetica", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: #AD2C3D;
+    font-weight: 700;
+    letter-spacing: 0.055625em;
+    padding: 4px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.reduce-motion__label{
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.reduce-motion__label .icon{
+    height: 10px;
+    margin-left: 8px;
+    width: 8px;
+}
+
+.nav-link{
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    color: #1423A5;
+    position: relative; /* Pastikan posisi relatif untuk gambar */
+    display: inline-block; /* Biarkan elemen <a> menyesuaikan ukuran gambar */
+    text-decoration: none; /* Hilangkan garis bawah default */
+}
+
+.nav-link::before {
+    content: '';
+    display: block; /* Membuat pseudo-element menjadi elemen block */
+    background-image: url('https://kirby.nintendo.com/assets/img/nav/nav-star_2x.png');
+    background-size: contain; /* Atur ukuran gambar agar sesuai */
+    background-repeat: no-repeat; /* Hindari pengulangan gambar */
+    width: 20px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: 20px;
+    position: absolute; /* Atur posisi absolut untuk gambar */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-50%); /* Posisikan tepat di tengah vertikal */
+    left: -25px; /* Posisi gambar di samping kiri */
+    opacity: 0; /* Sembunyikan gambar secara default */
+    transition: opacity 0.3s ease; /* Animasi perubahan opasitas */
+}
+
+.nav-link:hover::before {
+    opacity: 1; /* Tampilkan gambar saat dihover */
+}
+
+.nav-link::after {
+    content: '';
+    display: block; /* Membuat pseudo-element menjadi elemen block */
+    background-image: url('https://kirby.nintendo.com/assets/img/nav/nav-star_2x.png');
+    background-size: contain; /* Atur ukuran gambar agar sesuai */
+    background-repeat: no-repeat; /* Hindari pengulangan gambar */
+    width: 20px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    height: 20px;
+    position: absolute; /* Atur posisi absolut untuk gambar */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-50%); /* Posisikan tepat di tengah vertikal */
+    right: -25px; /* Posisi gambar di samping kiri */
+    opacity: 0; /* Sembunyikan gambar secara default */
+    transition: opacity 0.3s ease; /* Animasi perubahan opasitas */
+}
+
+.nav-link:hover::after {
+    opacity: 1; /* Tampilkan gambar saat dihover */
+}
+
+.hero-wrapper{
+    overflow: hidden;
+    position: relative;
+    height: 820px;
+    z-index: 2;
+}
+
+.hero__bg_container .hero__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hero__bg--final{
+    background: rgb(255,182,217);
+    background: linear-gradient(356deg, rgba(255,182,217,1) 0%, rgba(204,255,253,1) 100%);
+}
+
+.title-1{
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    color: #1423A5;
+}
+
+.img-hero{
+    margin: auto;
+}
+
+.sub-title-1{
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    padding: 18px 80px 14.4px 80px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+    color: #1423A5;
+}
+
+.starburst {
+    max-width: 300px;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto !important;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.cta {
+    position: relative;
+    z-index: 1;
+}
+
+.stars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: none;
+}
+
+.stars img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: fly 0.5s cubic-bezier(0.42, 0.0, 0.58, 1.0) forwards;
+    transform: scale(var(--scale));
+}
+
+@keyframes fly {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(var(--scale));
+    }
+    50% {
+        opacity: 1;
+        transform: translate(var(--x), var(--y)) scale(var(--scale));
+    }
+    70%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--x2), var(--y2)) scale(var(--scale));
+    }
+}
+
+.button{
+    font-family: "Dosis", "Open sans", "Helvetica", sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.375rem;
+    border-radius: 25px;
+    display: block;
+    overflow: hidden;
+    padding: 2px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border: solid 3px transparent;
+    z-index: -1;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.button--blue{
+    background-color: #7197ff;
+    border-color: #1423A5;
+}
+
+.button--blue span{
+    background-color: #2457e4;
+}
+
+.button--blue:after {
+    background-color: #1646c9;
+}
+
+.button:before{
+    content: "";
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.button span{
+    text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: relative;
+    z-index: 2;
+    padding: 4px 0 9px 0;
+    border-radius: 25px;
+}
+
+.button::after{
+    content: "";
+    border-radius: 0 0 3em 3em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+}
+
+.button span::before{
+    background-color: rgba(255, 255, 255, 0.1);
+    content: "";
+    height: 55px;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    z-index: 1;
+}
+
+a.button{
+    color: #fff; 
+}
+   
+.hero__particlesystem {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
+}
+
+.hero__particlesystem__particle {
+    background-size: contain;
+    background-position: 50%;
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    opacity: 0;
+    background-image: url('https://kirby.nintendo.com/assets/img/intro/star-glow.png'); /* Gambar partikel */
+    animation: particleAnimation 10s infinite ease-out;
+}
+
+@keyframes particleAnimation {
+    0% {
+        transform: matrix(0.108, 0, 0, 0.108, 28.9187, -5.66061) rotate(0deg); /* Translate -100px vertically */
+        opacity: 1;
+    }
+    100% {
+        transform: matrix(2.5, 0, 0, 2.5, -1018, 1079) rotate(-360deg); /* Translate 100px vertically */
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Style tambahan untuk menambah variasi partikel
+.hero__particlesystem__particle:nth-child(2) {
+    width: 4px;
+    height: 4px;
+    animation-duration: 6s;
+}
+
+.hero__particlesystem__particle:nth-child(3) {
+    width: 2px;
+    height: 2px;
+    animation-duration: 4s;
+} */
+
+.img-container img{
+    width: 400px;
+    height: 167px;
+    animation: spin 0.7s linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(0) translate(20%, 20%); }
+    100% { transform: rotate(360deg) scale(1) translate(0, 0); }
+}
+
+
+.hero__spiral {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero__spiral__pattern{
+    animation: rotating 20s linear infinite;
+    background: url('https://kirby.nintendo.com/assets/img/intro/spiral.png');
+    height: 1500px;
+    transform-origin: 50%;
+    width: 1500px;
+}
+
+.img-group{
+    width: 100%;
+    margin-top: 12rem;
+    position: relative;
+}
+
+.img-group .kirby{
+    position: absolute;
+    top: -6rem;
+    left: 12.5rem;
+    z-index: 1;
+}
+
+.img-group .metaknight{
+    position: absolute;
+    top: -15rem;
+    left: 24.5rem;
+}
+
+.img-group .dedede{
+    position: absolute;
+    top: -1rem;
+    left: 0;
+}
+
+.img-group .waddledee{
+    position: absolute;
+    top: -11rem;
+    left: 5rem;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-item{
+        text-align: center;
+        margin: 0;
+    }
+
+    .hero-wrapper {
+        min-height: 603px;
+    }
+
+    
+    .img-container img{
+        width: 220px;
+        height: 91px;
+    }
+
+    .img-group {
+        margin: 120px 0 0 0;
+        padding: 0;
+        top: 7rem;
+        height: 10rem;
+        width: 275px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .img-group .kirby {
+        width: 215px;
+        height: auto;
+        top: -10rem;
+        left: 20%;
+    }
+
+    .img-group .metaknight {
+        width: 150px;
+        height: auto;
+        top: -14rem;
+        left: 60%;
+    }
+
+    .img-group .dedede {
+        height: auto;
+        top: -7rem;
+        width: 118px;
+        left: calc(5% - 50px);
+    }
+
+    .img-group .waddledee {
+        height: auto;
+        width: 90px;
+        top: -12rem;
+        left: calc(18% - 40px);
+    }
+
+    .sub-title-1{
+        padding: 0;
+    }
+}
